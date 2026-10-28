@@ -1,0 +1,7 @@
+cell: "PLL"
+selected net: "VDD!"
+rejected nets: "12" "13" 
+contact layer: ""
+lower layer: "nwell"
+upper layer:  "ntap"
+command:  "sconnect ntap nwell"

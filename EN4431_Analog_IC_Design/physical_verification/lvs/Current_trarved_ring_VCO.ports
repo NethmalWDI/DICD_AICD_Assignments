@@ -1,0 +1,6 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary Current_trarved_ring_VCO
+vin 3 vin 165 27215 met1
+vdd 1 vdd 1165 58945 met1
+vss 2 vss 1165 1500 met1
+vout 11 vout 47465 25150 met1

@@ -1,0 +1,533 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v18.10-p002_1, built Tue May 29 19:19:55 PDT 2018
+Options:	
+Date:		Thu Dec 11 03:25:39 2025
+Host:		aed (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (4cores*8cpus*Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz 8192KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	18.1	Denied
+		invsb	Innovus Implementation System Basic	18.1	checkout succeeded
+		4 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> win
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set init_design_settop 0
+<CMD> set init_gnd_net {GND GNDO}
+<CMD> set init_io_file ../output/pad.io
+<CMD> set init_lef_file {../input/libs/gsclib045/lef/gsclib045_tech.lef ../input/libs/gsclib045/lef/gsclib045_multibitsDFF.lef ../input/libs/gsclib045/lef/gsclib045_macro.lef ../input/libs/gsclib045/lef/giolib045.lef}
+<CMD> set init_mmmc_file ../output/alu.view
+<CMD> set init_pwr_net {VDD VDDO}
+<CMD> set init_verilog ../output/alu_top_innovus.v
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 63
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/11 03:26:04, mem=483.5M)
+#% End Load MMMC data ... (date=12/11 03:26:04, total cpu=0:00:00.0, real=0:00:00.0, peak res=483.6M, current mem=483.6M)
+rc_fast rc_slow
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_tech.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_multibitsDFF.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-58):	MACRO 'DFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2X1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2X2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4X1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4X2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+
+Loading LEF file ../input/libs/gsclib045/lef/giolib045.lef ...
+**WARN: (IMPLF-61):	16 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-61' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSS25' in macro 'PADVSS25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDD25' in macro 'PADVDD25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDOZ' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDO' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDO' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDI' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'AY' in macro 'PADANALOG' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Thu Dec 11 03:26:04 2025
+viaInitial ends at Thu Dec 11 03:26:04 2025
+Loading view definition file from ../output/alu.view
+Reading lib_slow timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Read 489 cells in library 'slow_vdd1v0' 
+Reading lib_slow timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'slow_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+Read 16 cells in library 'slow_vdd1v0' 
+Reading lib_fast timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 489 cells in library 'fast_vdd1v0' 
+Reading lib_fast timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'fast_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib)
+Read 16 cells in library 'fast_vdd1v0' 
+Starting consistency checks on late and early library sets of delay corner 'dc_slow'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'dc_fast'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+*** End library_loading (cpu=0.02min, real=0.02min, mem=13.6M, fe_cpu=0.21min, fe_real=0.43min, fe_mem=610.4M) ***
+#% Begin Load netlist data ... (date=12/11 03:26:05, mem=503.1M)
+*** Begin netlist parsing (mem=610.4M) ***
+Pin 'VDD' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VDD' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Created 505 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../output/alu_top_innovus.v'
+
+*** Memory Usage v#1 (Current mem = 610.371M, initial mem = 251.484M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=610.4M) ***
+#% End Load netlist data ... (date=12/11 03:26:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=512.8M, current mem=512.8M)
+Top level cell is alu_top_module.
+Starting consistency checks on late and early library sets of delay corner 'dc_slow'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'dc_fast'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Hooked 1010 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell alu_top_module ...
+*** Netlist is unique.
+** info: there are 1107 modules.
+** info: there are 183 stdCell insts.
+** info: there are 34 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 647.793M, initial mem = 251.484M) ***
+Reading IO assignment file "../output/pad.io" ...
+Adjusting Core to Bottom to: 0.1600.
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Pre-connect netlist-defined P/G connections...
+  Updated 34 instances.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../input/libs/gsclib045/qrc/qx/gpdk045.tch
+Generating auto layer map file.
+Completed (cpu: 0:00:04.5 real: 0:00:05.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_slow
+    RC-Corner Name        : rc_slow
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../input/libs/gsclib045/qrc/qx/gpdk045.tch'
+ 
+ Analysis View: view_fast
+    RC-Corner Name        : rc_fast
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../input/libs/gsclib045/qrc/qx/gpdk045.tch'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../output/alu_2.sdc' ...
+Current (total cpu=0:00:17.6, real=0:00:31.0, peak res=732.4M, current mem=730.0M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../output/alu_2.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../output/alu_2.sdc, Line 10).
+
+**WARN: (TCLCMD-1041):	current_design should use the top cell as a argument (File ../output/alu_2.sdc, Line 13).
+
+alu_top_module
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 15).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk' (File ../output/alu_2.sdc, Line 15).
+
+**ERROR: (TCLCMD-1109):	Could not find source for create_clock command (File ../output/alu_2.sdc, Line 15).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 16).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 16).
+
+**ERROR: (TCLCMD-265):	No matching clock found for '' (File ../output/alu_2.sdc, Line 16).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 18).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[7]' (File ../output/alu_2.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[7]' (File ../output/alu_2.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 18).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 19).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[6]' (File ../output/alu_2.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[6]' (File ../output/alu_2.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 19).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 20).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[5]' (File ../output/alu_2.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[5]' (File ../output/alu_2.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 20).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 21).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[4]' (File ../output/alu_2.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[4]' (File ../output/alu_2.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 21).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 22).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[3]' (File ../output/alu_2.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[3]' (File ../output/alu_2.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 22).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2.sdc, Line 23).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[2]' (File ../output/alu_2.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'A[2]' (File ../output/alu_2.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2.sdc, Line 23).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 24).
+
+Message <TCLCMD-917> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../output/alu_2.sdc, Line 24).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[1]' (File ../output/alu_2.sdc, Line 24).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 25).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'A[0]' (File ../output/alu_2.sdc, Line 25).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2.sdc, Line 26).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'B[7]' (File ../output/alu_2.sdc, Line 26).
+
+Message <TCLCMD-513> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../output/alu_2.sdc, Line 27).
+
+INFO (CTE): Reading of timing constraints file ../output/alu_2.sdc completed, with 23 Warnings and 22 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=731.8M, current mem=731.8M)
+Current (total cpu=0:00:17.6, real=0:00:31.0, peak res=732.4M, current mem=731.8M)
+Total number of combinational cells: 327
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDO; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDI; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   IMPLF-58            16  MACRO '%s' has been found in the databas...
+WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+WARNING   IMPLF-200           21  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201            6  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPSYC-2             2  Timing information is not defined for ce...
+ERROR     TCLCMD-265           1  No matching clock found for '%s'         
+WARNING   TCLCMD-513          20  The software could not find a matching o...
+ERROR     TCLCMD-917          20  Cannot find '%s' that match '%s'         
+WARNING   TCLCMD-1041          1  current_design should use the top cell a...
+ERROR     TCLCMD-1109          1  Could not find source for %s command     
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-459          2  Appending library '%s' to the previously...
+*** Message Summary: 121 warning(s), 22 error(s)
+
+<CMD> saveDesign alu_pad_pin
+#% Begin save design ... (date=12/11 03:26:37, mem=784.5M)
+% Begin Save ccopt configuration ... (date=12/11 03:26:37, mem=784.5M)
+% End Save ccopt configuration ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=785.3M, current mem=785.3M)
+% Begin Save netlist data ... (date=12/11 03:26:37, mem=785.3M)
+Writing Binary DB to alu_pad_pin.dat/alu_top_module.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=791.6M, current mem=791.6M)
+Saving congestion map file alu_pad_pin.dat/alu_top_module.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/11 03:26:37, mem=792.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=792.2M, current mem=792.2M)
+% Begin Save clock tree data ... (date=12/11 03:26:37, mem=793.5M)
+% End Save clock tree data ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=793.5M, current mem=793.5M)
+Saving preference file alu_pad_pin.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/11 03:26:37, mem=793.8M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=794.3M, current mem=794.3M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/11 03:26:37, mem=794.3M)
+** Saving stdCellPlacement_binary (version# 2) ...
+% End Save placement data ... (date=12/11 03:26:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=794.5M, current mem=794.5M)
+% Begin Save routing data ... (date=12/11 03:26:37, mem=794.5M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=935.6M) ***
+% End Save routing data ... (date=12/11 03:26:38, total cpu=0:00:00.0, real=0:00:01.0, peak res=795.6M, current mem=795.6M)
+Saving property file alu_pad_pin.dat/alu_top_module.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=935.6M) ***
+% Begin Save power constraints data ... (date=12/11 03:26:38, mem=795.9M)
+% End Save power constraints data ... (date=12/11 03:26:38, total cpu=0:00:00.0, real=0:00:00.0, peak res=796.0M, current mem=796.0M)
+Saving preRoute extracted patterns in file 'alu_pad_pin.dat/alu_top_module.techData.gz' ...
+Saving preRoute extraction data in directory 'extraction' ...
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+Generated self-contained design alu_pad_pin.dat
+#% End save design ... (date=12/11 03:26:38, total cpu=0:00:00.3, real=0:00:01.0, peak res=800.2M, current mem=794.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Thu Dec 11 03:30:10 2025
+  Total CPU time:     0:00:36
+  Total real time:    0:04:32
+  Peak memory (main): 794.43MB
+
+
+*** Memory Usage v#1 (Current mem = 994.836M, initial mem = 251.484M) ***
+*** Message Summary: 123 warning(s), 22 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:35.6, real=0:04:31, mem=994.8M) ---

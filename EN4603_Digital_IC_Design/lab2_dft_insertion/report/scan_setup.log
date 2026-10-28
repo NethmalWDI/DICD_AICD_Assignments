@@ -1,0 +1,125 @@
+
+Design Name
+===========
+    uart_top
+
+Scan Style
+==========
+    muxed_scan
+Design has a valid DFT rule check status
+
+Global Constraints
+==================
+    Minimum number of scan chains: no_value
+    Maximum length of scan chains: no_value
+    Lock-up element type: preferred_level_sensitive
+    Mix clock edges in scan chain: false
+    Prefix for unnamed scan objects: dft_
+
+Test signal objects
+===================
+    shift_enable: 
+          object name: SE 
+          pin name: SE 
+          hookup_pin: SE 
+          hookup_polarity: non_inverted 
+          function: shift_enable 
+          active: high 
+          ideal: false 
+          user defined: true
+
+
+Test clock objects
+==================
+    test_clock:
+          object name: clk_a 
+          test_clock_domain: clk_a 
+          user defined: false 
+          source: clk_a  
+          root source: clk_a  
+          root source polarity: non_inverting
+          hookup_pin: clk_a 
+          period: 50000.0
+
+    test_clock:
+          object name: clk_b 
+          test_clock_domain: clk_b 
+          user defined: false 
+          source: clk_b  
+          root source: clk_b  
+          root source polarity: non_inverting
+          hookup_pin: clk_b 
+          period: 50000.0
+
+
+DFT controllable objects
+========================
+
+DFT don't scan objects
+======================
+
+DFT abstract don't scan objects
+===============================
+
+DFT scan segment constraints
+============================
+
+DFT scan chain constraints
+==========================
+    User Chain: 
+          object name: top_chain_a 
+          scan-in: scan_in_a 
+          scan-in hookup_pin: scan_in_a
+          scan-out: scan_out_a 
+          scan-out hookup_pin: scan_out_a
+          shared out: false 
+          shift_enable object name: none
+          max length: no_value
+          complete: false
+          test_clock domain: clk_a
+          test_clock edge: any
+
+    User Chain: 
+          object name: top_chain_b 
+          scan-in: scan_in_b 
+          scan-in hookup_pin: scan_in_b
+          scan-out: scan_out_b 
+          scan-out hookup_pin: scan_out_b
+          shared out: false 
+          shift_enable object name: none
+          max length: no_value
+          complete: false
+          test_clock domain: clk_b
+          test_clock edge: any
+
+
+DFT actual scan chains
+======================
+    Actual Chain:
+          object name: top_chain_a 
+          scan-in: scan_in_a 
+          scan-in hookup_pin: scan_in_a 
+          scan-out: scan_out_a 
+          scan-out hookup_pin: scan_out_a 
+          shared out: false
+          shift_enable: SE 
+          length: 82
+          segment objects: none
+          analyzed: false
+          test_clock domain: clk_a
+          test_clock edge: rise
+
+    Actual Chain:
+          object name: top_chain_b 
+          scan-in: scan_in_b 
+          scan-in hookup_pin: scan_in_b 
+          scan-out: scan_out_b 
+          scan-out hookup_pin: scan_out_b 
+          shared out: false
+          shift_enable: SE 
+          length: 82
+          segment objects: none
+          analyzed: false
+          test_clock domain: clk_b
+          test_clock edge: rise
+

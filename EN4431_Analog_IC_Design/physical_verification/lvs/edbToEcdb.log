@@ -1,0 +1,16 @@
+
+/home/aed/cadence/PVS161/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : PLL_2361.db
+ECDB dir        : ./
+Top Cell        : PLL
+CDL netlist     : ./PLL.net
+Layer map file  : ./PLL.ecdbmap
+Text map file   : ./PLL.ports
+Dependency map  : PLL.lmap.perc
+Lvs file        : ./PLL.lvsfile
+Float net file : .PLL.info.softchk
+debug           : 0
+Source Library  : PLL_2361

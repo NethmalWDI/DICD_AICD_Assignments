@@ -1,0 +1,8 @@
+Gate area 1.0260 um^2
+Level 0 Module uart_top                                 Gates=      2498 Cells=     764 Area=    2562.9 um^2
+Level 1 Module ins_uart_transceiver_A                   Gates=1250       Cells=382      Area=    1282.8 um^2
+Level 2 Module ins_uart_transceiver_A/ins_rx_wrapper    Gates=697        Cells=191      Area=     715.1 um^2
+Level 2 Module ins_uart_transceiver_A/ins_tx_wrapper    Gates=553        Cells=191      Area=     567.7 um^2
+Level 1 Module ins_uart_transceiver_B                   Gates=1247       Cells=382      Area=    1280.1 um^2
+Level 2 Module ins_uart_transceiver_B/ins_rx_wrapper    Gates=698        Cells=191      Area=     716.8 um^2
+Level 2 Module ins_uart_transceiver_B/ins_tx_wrapper    Gates=549        Cells=191      Area=     563.3 um^2

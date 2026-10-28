@@ -1,0 +1,35 @@
+
+
+***********************************************************
+* CDL produced by pvsBuildNetlist on Jun 21 17:56:39 2026 *
+***********************************************************
+
+
+*pvsViewList = auCdl schematic
+*pvsStopList = ("auCdl")
+*pvsSimName  = auCdl
+
+
+
+*.EXPAND_ON_M_FACTOR
+*.MEGA
+
+
+
+.subckt Charge_Pump down out up vdd vss
+*PVSCELL netlisted from Epitaxc_new Charge_Pump schematic
+  MNM0 net023 vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM2 net16 vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM3 vdd vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM6 out down net023 vss nfet_01v8_lvt M=1 L=150n W=420n
+  MNM7 net24 up vss vss nfet_01v8_lvt M=1 L=150n W=420n
+  MPM0 net021 net16 vdd vdd pfet_01v8_lvt M=1 L=10u W=2u
+  MPM2 net16 net16 vdd vdd pfet_01v8_lvt M=1 L=10u W=2u
+  MPM4 out net24 net021 vdd pfet_01v8_lvt M=1 L=350n W=550n
+  MPM5 net24 up vdd vdd pfet_01v8_lvt M=1 L=350n W=550n
+.ends Charge_Pump
+
+
+***********************************************************
+*             Completed at Jun 21 17:56:39 2026           *
+***********************************************************

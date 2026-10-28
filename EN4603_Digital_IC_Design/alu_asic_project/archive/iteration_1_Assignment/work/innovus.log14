@@ -1,0 +1,1701 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v18.10-p002_1, built Tue May 29 19:19:55 PDT 2018
+Options:	
+Date:		Thu Dec 11 14:49:34 2025
+Host:		aed (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (4cores*8cpus*Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz 8192KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	18.1	Denied
+		invsb	Innovus Implementation System Basic	18.1	checkout succeeded
+		4 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> win
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set init_design_settop 0
+<CMD> set init_gnd_net {GND VSSIOR}
+<CMD> set init_io_file ../output/pad.io
+<CMD> set init_lef_file {../input/libs/gsclib045/lef/gsclib045_tech.lef ../input/libs/gsclib045/lef/gsclib045_multibitsDFF.lef ../input/libs/gsclib045/lef/gsclib045_macro.lef ../input/libs/gsclib045/lef/giolib045.lef}
+<CMD> set init_mmmc_file ../output/alu.view
+<CMD> set init_pwr_net {VDD VDDIOR}
+<CMD> set init_verilog ../output/alu_top_innovus.v
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 63
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/11 14:50:02, mem=490.8M)
+#% End Load MMMC data ... (date=12/11 14:50:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=490.9M, current mem=490.9M)
+rc_fast rc_slow
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_tech.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_multibitsDFF.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file ../input/libs/gsclib045/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-58):	MACRO 'DFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2X1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF2X2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4X1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'DFF4X2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SDFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF2RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF2RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF4RX1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'SPDFF4RX2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+
+Loading LEF file ../input/libs/gsclib045/lef/giolib045.lef ...
+**WARN: (IMPLF-61):	16 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-61' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED10' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSS25' in macro 'PADVSS25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDD25' in macro 'PADVDD25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDOZ' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDO' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDO' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDI' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'AY' in macro 'PADANALOG' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Thu Dec 11 14:50:02 2025
+viaInitial ends at Thu Dec 11 14:50:02 2025
+Loading view definition file from ../output/alu.view
+Reading lib_slow timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXL' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2' is not defined in the library. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Read 489 cells in library 'slow_vdd1v0' 
+Reading lib_slow timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'slow_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib)
+Read 16 cells in library 'slow_vdd1v0' 
+Reading lib_fast timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 489 cells in library 'fast_vdd1v0' 
+Reading lib_fast timing library '/home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'fast_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/user19/entc21_dicd/210421E/Assignment/input/libs/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib)
+Read 16 cells in library 'fast_vdd1v0' 
+Starting consistency checks on late and early library sets of delay corner 'dc_slow'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'dc_fast'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+*** End library_loading (cpu=0.02min, real=0.02min, mem=14.5M, fe_cpu=0.21min, fe_real=0.48min, fe_mem=619.3M) ***
+#% Begin Load netlist data ... (date=12/11 14:50:03, mem=510.1M)
+*** Begin netlist parsing (mem=619.3M) ***
+Pin 'VDD' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VDD' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Created 505 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../output/alu_top_innovus.v'
+
+*** Memory Usage v#1 (Current mem = 619.277M, initial mem = 259.484M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=619.3M) ***
+#% End Load netlist data ... (date=12/11 14:50:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=519.8M, current mem=519.8M)
+Top level cell is alu_top_module.
+Starting consistency checks on late and early library sets of delay corner 'dc_slow'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'dc_fast'
+late library set: lib_slow
+early library set: lib_fast
+Completed consistency checks. Status: Successful
+Hooked 1010 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell alu_top_module ...
+*** Netlist is unique.
+** info: there are 1107 modules.
+** info: there are 183 stdCell insts.
+** info: there are 34 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 656.699M, initial mem = 259.484M) ***
+Reading IO assignment file "../output/pad.io" ...
+Adjusting Core to Bottom to: 0.1600.
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Pre-connect netlist-defined P/G connections...
+  Updated 34 instances.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../input/libs/gsclib045/qrc/qx/gpdk045.tch
+Generating auto layer map file.
+Completed (cpu: 0:00:04.5 real: 0:00:04.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_slow
+    RC-Corner Name        : rc_slow
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../input/libs/gsclib045/qrc/qx/gpdk045.tch'
+ 
+ Analysis View: view_fast
+    RC-Corner Name        : rc_fast
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../input/libs/gsclib045/qrc/qx/gpdk045.tch'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../output/alu_2_new.sdc' ...
+Current (total cpu=0:00:17.7, real=0:00:34.0, peak res=737.0M, current mem=733.4M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../output/alu_2_new.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../output/alu_2_new.sdc, Line 10).
+
+**WARN: (TCLCMD-1041):	current_design should use the top cell as a argument (File ../output/alu_2_new.sdc, Line 13).
+
+alu_top_module
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 15).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk' (File ../output/alu_2_new.sdc, Line 15).
+
+**ERROR: (TCLCMD-1109):	Could not find source for create_clock command (File ../output/alu_2_new.sdc, Line 15).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 16).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 16).
+
+**ERROR: (TCLCMD-265):	No matching clock found for '' (File ../output/alu_2_new.sdc, Line 16).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 18).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 18).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 19).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 19).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 20).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 20).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 21).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 22).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 22).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 23).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 23).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 24).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 24).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 24).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 25).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 25).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 25).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 26).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ../output/alu_2_new.sdc, Line 26).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '' (File ../output/alu_2_new.sdc, Line 26).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 27).
+
+Message <TCLCMD-917> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../output/alu_2_new.sdc, Line 27).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 28).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 29).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 30).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 31).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 32).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 33).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 34).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ../output/alu_2_new.sdc, Line 35).
+
+Message <TCLCMD-513> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../output/alu_2_new.sdc, Line 36).
+
+INFO (CTE): Reading of timing constraints file ../output/alu_2_new.sdc completed, with 23 Warnings and 22 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=741.6M, current mem=741.6M)
+Current (total cpu=0:00:17.8, real=0:00:34.0, peak res=741.6M, current mem=741.6M)
+Total number of combinational cells: 327
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDO; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PADDI; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   IMPLF-58            16  MACRO '%s' has been found in the databas...
+WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+WARNING   IMPLF-200           21  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201            6  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPSYC-2             2  Timing information is not defined for ce...
+ERROR     TCLCMD-265           1  No matching clock found for '%s'         
+WARNING   TCLCMD-513          20  The software could not find a matching o...
+ERROR     TCLCMD-917          20  Cannot find '%s' that match '%s'         
+WARNING   TCLCMD-1041          1  current_design should use the top cell a...
+ERROR     TCLCMD-1109          1  Could not find source for %s command     
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-459          2  Appending library '%s' to the previously...
+*** Message Summary: 121 warning(s), 22 error(s)
+
+<CMD> defIn ../output/alu_2_scanDEF.scandef
+Reading DEF file '../output/alu_2_scanDEF.scandef', current time is Thu Dec 11 14:53:58 2025 ...
+--- CASESENSITIVE ON
+--- DIVIDERCHAR '/'
+**ERROR: (IMPDF-279):	The I/O pin 'scan_in' specified in START point of the chain 'chain_1_seg1_clk_rising' does not exist, the chain is discarded.
+DEF file '../output/alu_2_scanDEF.scandef' is parsed, current time is Thu Dec 11 14:53:58 2025.
+<CMD> defIn ../output/alu_2_scanDEF.scandef
+Reading DEF file '../output/alu_2_scanDEF.scandef', current time is Thu Dec 11 14:58:06 2025 ...
+--- CASESENSITIVE ON
+--- DIVIDERCHAR '/'
+**ERROR: (IMPDF-276):	The instance 'flag_carry_reg' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'flag_zero_reg' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[0]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[1]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[2]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[3]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[4]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[5]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[6]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+**ERROR: (IMPDF-276):	The instance 'result_reg[7]' referenced in scanchain 'chain_1_seg1_clk_rising' is not found in db. This instance node is ignored.
+DEF file '../output/alu_2_scanDEF.scandef' is parsed, current time is Thu Dec 11 14:58:06 2025.
+<CMD> setDesignMode -process 45
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'medium'.
+Updating process node dependent CCOpt properties for the 45nm process node.
+<CMD> getIoFlowFlag
+<CMD> saveDesign alu_pad_01
+#% Begin save design ... (date=12/11 15:01:24, mem=796.2M)
+% Begin Save ccopt configuration ... (date=12/11 15:01:24, mem=796.2M)
+% End Save ccopt configuration ... (date=12/11 15:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=796.9M, current mem=796.9M)
+% Begin Save netlist data ... (date=12/11 15:01:24, mem=796.9M)
+Writing Binary DB to alu_pad_01.dat/alu_top_module.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/11 15:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=801.2M, current mem=801.2M)
+Saving congestion map file alu_pad_01.dat/alu_top_module.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/11 15:01:24, mem=801.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/11 15:01:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=801.8M, current mem=801.8M)
+% Begin Save clock tree data ... (date=12/11 15:01:24, mem=803.1M)
+% End Save clock tree data ... (date=12/11 15:01:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=803.1M, current mem=803.1M)
+Saving preference file alu_pad_01.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/11 15:01:25, mem=803.4M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/11 15:01:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=803.9M, current mem=803.9M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/11 15:01:25, mem=804.0M)
+** Saving stdCellPlacement_binary (version# 2) ...
+% End Save placement data ... (date=12/11 15:01:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=804.2M, current mem=804.2M)
+% Begin Save routing data ... (date=12/11 15:01:25, mem=804.2M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=945.7M) ***
+% End Save routing data ... (date=12/11 15:01:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=804.5M, current mem=804.5M)
+Saving SCANDEF file ...
+**WARN: (IMPSC-1024):	Backward tracing reached IO instance "so".
+**WARN: (IMPSC-1024):	Backward tracing reached IO instance "si".
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+Saving property file alu_pad_01.dat/alu_top_module.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1132.7M) ***
+% Begin Save power constraints data ... (date=12/11 15:01:25, mem=809.5M)
+% End Save power constraints data ... (date=12/11 15:01:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.5M, current mem=809.5M)
+Saving preRoute extracted patterns in file 'alu_pad_01.dat/alu_top_module.techData.gz' ...
+Saving preRoute extraction data in directory 'extraction' ...
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+Generated self-contained design alu_pad_01.dat
+#% End save design ... (date=12/11 15:01:25, total cpu=0:00:00.2, real=0:00:01.0, peak res=813.1M, current mem=807.8M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSC-1024           2  Backward tracing reached IO instance "%s...
+*** Message Summary: 2 warning(s), 0 error(s)
+
+<CMD> saveDesign alu_pad_01
+#% Begin save design ... (date=12/11 15:01:26, mem=807.9M)
+% Begin Save ccopt configuration ... (date=12/11 15:01:26, mem=807.9M)
+% End Save ccopt configuration ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=807.9M, current mem=807.9M)
+% Begin Save netlist data ... (date=12/11 15:01:26, mem=807.9M)
+Writing Binary DB to alu_pad_01.dat.tmp/alu_top_module.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.9M, current mem=809.9M)
+Saving congestion map file alu_pad_01.dat.tmp/alu_top_module.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/11 15:01:26, mem=809.9M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.9M, current mem=809.9M)
+% Begin Save clock tree data ... (date=12/11 15:01:26, mem=809.9M)
+% End Save clock tree data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.9M, current mem=809.9M)
+Saving preference file alu_pad_01.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/11 15:01:26, mem=809.9M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.9M, current mem=809.9M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/11 15:01:26, mem=809.9M)
+** Saving stdCellPlacement_binary (version# 2) ...
+% End Save placement data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=809.9M, current mem=809.9M)
+% Begin Save routing data ... (date=12/11 15:01:26, mem=809.9M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1012.0M) ***
+% End Save routing data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=810.9M, current mem=810.9M)
+Saving SCANDEF file ...
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+Saving property file alu_pad_01.dat.tmp/alu_top_module.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1204.0M) ***
+% Begin Save power constraints data ... (date=12/11 15:01:26, mem=810.9M)
+% End Save power constraints data ... (date=12/11 15:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=810.9M, current mem=810.9M)
+Saving preRoute extracted patterns in file 'alu_pad_01.dat.tmp/alu_top_module.techData.gz' ...
+Saving preRoute extraction data in directory 'extraction' ...
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+Generated self-contained design alu_pad_01.dat.tmp
+#% End save design ... (date=12/11 15:01:26, total cpu=0:00:00.2, real=0:00:00.0, peak res=810.9M, current mem=808.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> saveDesign ../new_output/alu_pad
+#% Begin save design ... (date=12/11 15:01:48, mem=808.8M)
+% Begin Save ccopt configuration ... (date=12/11 15:01:48, mem=808.8M)
+% End Save ccopt configuration ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=808.8M, current mem=808.8M)
+% Begin Save netlist data ... (date=12/11 15:01:48, mem=808.8M)
+Writing Binary DB to ../new_output/alu_pad.dat/alu_top_module.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=810.9M, current mem=810.9M)
+Saving congestion map file ../new_output/alu_pad.dat/alu_top_module.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/11 15:01:48, mem=810.9M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=810.9M, current mem=810.9M)
+% Begin Save clock tree data ... (date=12/11 15:01:48, mem=810.9M)
+% End Save clock tree data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=810.9M, current mem=810.9M)
+Saving preference file ../new_output/alu_pad.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/11 15:01:48, mem=810.9M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=812.9M, current mem=812.9M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/11 15:01:48, mem=812.9M)
+** Saving stdCellPlacement_binary (version# 2) ...
+% End Save placement data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=812.9M, current mem=812.9M)
+% Begin Save routing data ... (date=12/11 15:01:48, mem=812.9M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1019.1M) ***
+% End Save routing data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=813.2M, current mem=813.2M)
+Saving SCANDEF file ...
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+Saving property file ../new_output/alu_pad.dat/alu_top_module.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1211.1M) ***
+% Begin Save power constraints data ... (date=12/11 15:01:48, mem=813.2M)
+% End Save power constraints data ... (date=12/11 15:01:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=813.2M, current mem=813.2M)
+Saving preRoute extracted patterns in file '../new_output/alu_pad.dat/alu_top_module.techData.gz' ...
+Saving preRoute extraction data in directory 'extraction' ...
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+Generated self-contained design alu_pad.dat
+#% End save design ... (date=12/11 15:01:48, total cpu=0:00:00.2, real=0:00:01.0, peak res=813.2M, current mem=808.9M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -r 1 0.4 30.0 30 30.0 30
+Adjusting Core to Bottom to: 30.1800.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -r 1.12371428571 0.001145 30.0 30.18 30.0 30.54
+Adjusting Core to Bottom to: 30.3700.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD GND} -type core_rings -follow core -layer {top Metal7 bottom Metal7 left Metal8 right Metal8} -width {top 5 bottom 5 left 5 right 5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 2 bottom 2 left 2 right 2} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal7 |        4       |       NA       |
+|  Via7  |        8       |        0       |
+| Metal8 |        4       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD GND} -type core_rings -follow core -layer {top Metal7 bottom Metal7 left Metal8 right Metal8} -width {top 5 bottom 5 left 5 right 5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 2 bottom 2 left 2 right 2} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Ring generation is complete.
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VDD GND} -layer Metal7 -direction horizontal -width 3 -spacing 2 -number_of_sets 7 -start_from bottom -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 14 wires.
+ViaGen created 28 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal7 |       14       |       NA       |
+|  Via7  |       28       |        0       |
++--------+----------------+----------------+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VDD GND} -layer Metal8 -direction vertical -width 3 -spacing 2 -number_of_sets 7 -start_from left -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -trim_antenna_max_distance  0.00
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 14 wires.
+ViaGen created 126 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  Via7  |       126      |        0       |
+| Metal8 |       14       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VDD GND} -layer Metal8 -direction vertical -width 3 -spacing 2 -number_of_sets 7 -start_from left -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -trim_antenna_max_distance  0.00
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (321.50, 263.37) (321.50, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (396.86, 263.37) (396.86, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (472.23, 263.37) (472.23, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (547.59, 263.37) (547.59, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (622.96, 263.37) (622.96, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (698.33, 263.37) (698.33, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (773.69, 263.37) (773.69, 906.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (326.50, 256.37) (326.50, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (401.86, 256.37) (401.86, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (477.23, 256.37) (477.23, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (552.59, 256.37) (552.59, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (627.96, 256.37) (627.96, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (703.33, 256.37) (703.33, 913.65) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (778.69, 256.37) (778.69, 913.65) because same wire already exists.
+Stripe generation is complete.
+<CMD> saveDesign ../new_output/alu_pad_grid
+#% Begin save design ... (date=12/11 15:22:01, mem=836.7M)
+% Begin Save ccopt configuration ... (date=12/11 15:22:01, mem=836.7M)
+% End Save ccopt configuration ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=836.7M, current mem=836.7M)
+% Begin Save netlist data ... (date=12/11 15:22:01, mem=836.7M)
+Writing Binary DB to ../new_output/alu_pad_grid.dat/alu_top_module.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=838.7M, current mem=838.7M)
+Saving congestion map file ../new_output/alu_pad_grid.dat/alu_top_module.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/11 15:22:01, mem=839.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=839.2M, current mem=839.2M)
+% Begin Save clock tree data ... (date=12/11 15:22:01, mem=839.2M)
+% End Save clock tree data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=839.2M, current mem=839.2M)
+Saving preference file ../new_output/alu_pad_grid.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/11 15:22:01, mem=839.2M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=839.2M, current mem=839.2M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/11 15:22:01, mem=839.2M)
+** Saving stdCellPlacement_binary (version# 2) ...
+% End Save placement data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=839.2M, current mem=839.2M)
+% Begin Save routing data ... (date=12/11 15:22:01, mem=839.2M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1037.1M) ***
+% End Save routing data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=839.2M, current mem=839.2M)
+Saving SCANDEF file ...
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+Saving property file ../new_output/alu_pad_grid.dat/alu_top_module.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1226.4M) ***
+% Begin Save power constraints data ... (date=12/11 15:22:01, mem=836.0M)
+% End Save power constraints data ... (date=12/11 15:22:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=836.0M, current mem=836.0M)
+Saving preRoute extracted patterns in file '../new_output/alu_pad_grid.dat/alu_top_module.techData.gz' ...
+Saving preRoute extraction data in directory 'extraction' ...
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+rc_fast rc_slow
+Generated self-contained design alu_pad_grid.dat
+#% End save design ... (date=12/11 15:22:01, total cpu=0:00:00.2, real=0:00:00.0, peak res=839.2M, current mem=833.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+**WARN: (IMPTCM-125):	Option "-doCongOpt" for command getPlaceMode is obsolete and will be ignored. It no longer has any effect and should be removed from your script.
+<CMD> setPlaceMode -fp false
+<CMD> place_design
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.0) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Deleted 0 physical inst  (cell - / prefix -).
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#1 (mem=1222.4M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:01.1 mem=1222.4M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:01.2 mem=1222.4M) ***
+No user-set net weight.
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+#std cell=183 (0 fixed + 183 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=42 #net=253 #term=778 #term/net=3.08, #fixedIo=42, #floatIo=0, #fixedPin=34, #floatPin=0
+stdCell: 183 single + 0 double + 0 multi
+Total standard cell length = 0.2360 (mm), area = 0.0004 (mm^2)
+Estimated cell power/ground rail width = 0.213 um
+Average module density = 0.001.
+Density for the design = 0.001.
+       = stdcell_area 1180 sites (404 um^2) / alloc_area 1030768 sites (352523 um^2).
+Pin Density = 0.0007548.
+            = total # of pins 778 / total area 1030768.
+=== lastAutoLevel = 10 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.365e+04 (1.15e+04 1.21e+04)
+              Est.  stn bbox = 2.603e+04 (1.25e+04 1.35e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1094.4M
+Iteration  2: Total net bbox = 2.365e+04 (1.15e+04 1.21e+04)
+              Est.  stn bbox = 2.603e+04 (1.25e+04 1.35e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1094.4M
+Iteration  3: Total net bbox = 2.097e+04 (1.04e+04 1.05e+04)
+              Est.  stn bbox = 2.349e+04 (1.15e+04 1.20e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1110.4M
+Active setup views:
+    view_slow
+Iteration  4: Total net bbox = 2.000e+04 (9.95e+03 1.00e+04)
+              Est.  stn bbox = 2.243e+04 (1.10e+04 1.14e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1110.4M
+Iteration  5: Total net bbox = 1.795e+04 (8.77e+03 9.18e+03)
+              Est.  stn bbox = 2.018e+04 (9.68e+03 1.05e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1110.4M
+Iteration  6: Total net bbox = 1.668e+04 (8.00e+03 8.67e+03)
+              Est.  stn bbox = 1.878e+04 (8.85e+03 9.94e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1110.4M
+Iteration  7: Total net bbox = 1.668e+04 (8.00e+03 8.68e+03)
+              Est.  stn bbox = 1.878e+04 (8.84e+03 9.94e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1110.4M
+Iteration  8: Total net bbox = 1.668e+04 (8.00e+03 8.68e+03)
+              Est.  stn bbox = 1.878e+04 (8.84e+03 9.94e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1126.6M
+Iteration  9: Total net bbox = 1.602e+04 (7.59e+03 8.43e+03)
+              Est.  stn bbox = 1.806e+04 (8.40e+03 9.66e+03)
+              cpu = 0:00:00.4 real = 0:00:00.0 mem = 1134.6M
+Iteration 10: Total net bbox = 1.602e+04 (7.59e+03 8.43e+03)
+              Est.  stn bbox = 1.806e+04 (8.40e+03 9.66e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1134.6M
+Iteration 11: Total net bbox = 1.600e+04 (7.67e+03 8.33e+03)
+              Est.  stn bbox = 1.804e+04 (8.49e+03 9.56e+03)
+              cpu = 0:00:00.4 real = 0:00:01.0 mem = 1138.6M
+Iteration 12: Total net bbox = 1.600e+04 (7.67e+03 8.33e+03)
+              Est.  stn bbox = 1.804e+04 (8.49e+03 9.56e+03)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1138.6M
+Iteration 13: Total net bbox = 1.632e+04 (7.70e+03 8.62e+03)
+              Est.  stn bbox = 1.840e+04 (8.52e+03 9.88e+03)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 1158.6M
+Iteration 14: Total net bbox = 1.632e+04 (7.70e+03 8.62e+03)
+              Est.  stn bbox = 1.840e+04 (8.52e+03 9.88e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1158.6M
+Iteration 15: Total net bbox = 1.673e+04 (7.85e+03 8.87e+03)
+              Est.  stn bbox = 1.883e+04 (8.68e+03 1.02e+04)
+              cpu = 0:00:01.3 real = 0:00:01.0 mem = 1158.6M
+Iteration 16: Total net bbox = 1.673e+04 (7.85e+03 8.87e+03)
+              Est.  stn bbox = 1.883e+04 (8.68e+03 1.02e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1158.6M
+*** cost = 1.673e+04 (7.85e+03 8.87e+03) (cpu for global=0:00:03.5) real=0:00:04.0***
+Info: 0 clock gating cells identified, 0 (on average) moved 0/8
+net ignore based on current view = 0
+Solver runtime cpu: 0:00:01.1 real: 0:00:01.0
+Core Placement runtime cpu: 0:00:02.6 real: 0:00:03.0
+**WARN: (IMPSC-1750):	scanReorder is running on autoFlow mode, it probably overwrite other user setting, see the detail in logv.
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+*** Scan Skip Mode Summary:
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+INFO: running scan reGrouping ...
+Regrouping fail in 0 partitions (total 1 partitions).
+ReGrouping: total 1 chains and success 1 chains
+INFO: finish scan reGrouping 
+**WARN: (IMPSC-1024):	Backward tracing reached IO instance "so".
+**WARN: (IMPSC-1024):	Backward tracing reached IO instance "si".
+*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
+Successfully traced 1 scan chain  (total 10 scan bits).
+Start applying DEF ordered sections ...
+Successfully applied all DEF ordered sections.
+*** Scan Sanity Check Summary:
+*** 1 scan chain  passed sanity check.
+INFO: Auto effort scan reorder.
+*** Summary: Scan Reorder within scan chain
+        Total scan reorder time: cpu: 0:00:00.0 , real: 0:00:00.0
+Successfully reordered 1 scan chain .
+Initial total scan wire length:     1382.911 (floating:      772.267)
+Final   total scan wire length:     1347.656 (floating:      737.012)
+Improvement:       35.255   percent  2.55 (floating improvement:       35.255   percent  4.57)
+*** End of ScanReorder (cpu=0:00:00.0, real=0:00:00.0, mem=1350.6M) ***
+Total net length = 1.673e+04 (7.854e+03 8.874e+03) (ext = 0.000e+00)
+*** Starting refinePlace (0:03:30 mem=1350.6M) ***
+Total net bbox length = 1.742e+04 (8.085e+03 9.332e+03) (ext = 1.519e+04)
+Move report: Detail placement moves 183 insts, mean move: 1.08 um, max move: 4.05 um
+	Max move on inst (top1/g5451__5953): (571.44, 492.57) --> (569.00, 490.96)
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1350.6MB
+Summary Report:
+Instances move: 183 (out of 183 movable)
+Instances flipped: 0
+Mean displacement: 1.08 um
+Max displacement: 4.05 um (Instance: top1/g5451__5953) (571.442, 492.569) -> (569, 490.96)
+	Length: 11 sites, height: 1 rows, site name: CoreSite, cell type: ADDHX1
+Total net bbox length = 1.742e+04 (8.086e+03 9.335e+03) (ext = 1.519e+04)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1350.6MB
+*** Finished refinePlace (0:03:30 mem=1350.6M) ***
+*** End of Placement (cpu=0:00:05.1, real=0:00:06.0, mem=1350.6M) ***
+default core: bins with density > 0.750 =  0.00 % ( 0 / 1221 )
+Density distribution unevenness ratio = 99.333%
+*** Free Virtual Timing Model ...(mem=1350.6M)
+
+Starting congestion repair ...
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Metal1 has no routable track
+[NR-eGR] Metal2 has single uniform track structure
+[NR-eGR] Metal3 has single uniform track structure
+[NR-eGR] Metal4 has single uniform track structure
+[NR-eGR] Metal5 has single uniform track structure
+[NR-eGR] Metal6 has single uniform track structure
+[NR-eGR] Metal7 has single uniform track structure
+[NR-eGR] Metal8 has single uniform track structure
+[NR-eGR] Metal9 has single uniform track structure
+[NR-eGR] Metal10 has single uniform track structure
+[NR-eGR] Metal11 has single uniform track structure
+[NR-eGR] Read 360 PG shapes in 0.000 seconds
+
+[NR-eGR] numRoutingBlks=0 numInstBlks=728 numPGBlocks=360 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
+[NR-eGR] Read numTotalNets=254  numIgnoredNets=0
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Nets: 220 
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 220 net(s) in layer range [2, 11]
+[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.770705e+04um
+[NR-eGR] 
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]       Layer                (0)    OverCon 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]  Metal1  (1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal2  (2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal3  (3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal4  (4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal5  (5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal6  (6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal7  (7)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal8  (8)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal9  (9)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal10 (10)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal11 (11)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR] Total                0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+Early Global Route congestion estimation runtime: 0.44 seconds, mem = 1336.4M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+
+=== incrementalPlace Internal Loop 1 ===
+Skipped repairing congestion.
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Metal1  (1F) length: 0.000000e+00um, number of vias: 687
+[NR-eGR] Metal2  (2V) length: 3.650705e+03um, number of vias: 1058
+[NR-eGR] Metal3  (3H) length: 8.258555e+03um, number of vias: 58
+[NR-eGR] Metal4  (4V) length: 5.938570e+03um, number of vias: 0
+[NR-eGR] Metal5  (5H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal6  (6V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal7  (7H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal8  (8V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal9  (9H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal10 (10V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal11 (11H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 1.784783e+04um, number of vias: 1803
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total eGR-routed clock nets wire length: 0.000000e+00um 
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 0.12 seconds, mem = 1117.8M
+End of congRepair (cpu=0:00:00.6, real=0:00:01.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 6, real = 0: 0: 7, mem = 1117.8M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+WARNING   IMPSC-1024           2  Backward tracing reached IO instance "%s...
+WARNING   IMPSC-1750           1  scanReorder is running on autoFlow mode,...
+*** Message Summary: 4 warning(s), 0 error(s)
+
+<CMD> setLayerPreference node_net -isVisible 0
+<CMD> setLayerPreference node_net -isVisible 1
+<CMD> clearGlobalNets
+Pre-connect netlist-defined P/G connections...
+  Updated 34 instances.
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -instanceBasename {} -override -verbose
+191 new pwr-pin connections were made to global net 'VDD'.
+<CMD> globalNetConnect GND -type pgpin -pin GND -instanceBasename {} -override -verbose
+**WARN: (IMPDB-1261):	No PG pin 'GND' in instances with basename '*' in the design.
+**ERROR: (IMPDB-1221):	A global net connection rule was specified to connect ground pins with the name pattern 'GND' to a global net.  But the connections cannot be made because there is no such ground pin with name matching the pattern in any cell.  Check the pin name pattern and make sure it is correct.
+<CMD> globalNetConnect VSSIOR -type pgpin -pin VSSIOR -instanceBasename {} -override -verbose
+8 new gnd-pin connections were made to global net 'VSSIOR'.
+<CMD> globalNetConnect VDDIOR -type pgpin -pin VDDIOR -instanceBasename {} -override -verbose
+8 new pwr-pin connections were made to global net 'VDDIOR'.
+<CMD> zoomBox 544.951 513.769 624.394 446.096
+<CMD> fit
+<CMD> reportGateCount -level 5 -limit 100 -outfile alu_pad.gateCount
+Gate area 1.0260 um^2
+[0] alu_top_module Gates=393 Cells=183 Area=403.6 um^2
+[1] top1 Gates=393 Cells=183 Area=403.6 um^2
+<CMD> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix alu_top_module_preCTS -outDir ../new_output
+Setting timing_disable_library_data_to_data_checks to 'true'.
+Setting timing_disable_user_data_to_data_checks to 'true'.
+Start to check current routing status for nets...
+All nets will be re-routed.
+End to check current routing status for nets (mem=1119.8M)
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+[NR-eGR] Started earlyGlobalRoute kernel
+[NR-eGR] Initial Peak syMemory usage = 1119.8 MB
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Metal1 has no routable track
+[NR-eGR] Metal2 has single uniform track structure
+[NR-eGR] Metal3 has single uniform track structure
+[NR-eGR] Metal4 has single uniform track structure
+[NR-eGR] Metal5 has single uniform track structure
+[NR-eGR] Metal6 has single uniform track structure
+[NR-eGR] Metal7 has single uniform track structure
+[NR-eGR] Metal8 has single uniform track structure
+[NR-eGR] Metal9 has single uniform track structure
+[NR-eGR] Metal10 has single uniform track structure
+[NR-eGR] Metal11 has single uniform track structure
+[NR-eGR] Read 360 PG shapes in 0.000 seconds
+
+[NR-eGR] numRoutingBlks=0 numInstBlks=728 numPGBlocks=360 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
+[NR-eGR] Read numTotalNets=254  numIgnoredNets=0
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Nets: 220 
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 220 net(s) in layer range [2, 11]
+[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.770705e+04um
+[NR-eGR] 
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]       Layer                (0)    OverCon 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]  Metal1  (1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal2  (2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal3  (3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal4  (4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal5  (5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal6  (6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal7  (7)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal8  (8)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal9  (9)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal10 (10)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal11 (11)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR] Total                0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Metal1  (1F) length: 0.000000e+00um, number of vias: 687
+[NR-eGR] Metal2  (2V) length: 3.650705e+03um, number of vias: 1058
+[NR-eGR] Metal3  (3H) length: 8.258555e+03um, number of vias: 58
+[NR-eGR] Metal4  (4V) length: 5.938570e+03um, number of vias: 0
+[NR-eGR] Metal5  (5H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal6  (6V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal7  (7H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal8  (8V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal9  (9H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal10 (10V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Metal11 (11H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 1.784783e+04um, number of vias: 1803
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total eGR-routed clock nets wire length: 0.000000e+00um 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] End Peak syMemory usage = 1120.9 MB
+[NR-eGR] Early Global Router Kernel+IO runtime : 0.60 seconds
+Extraction called for design 'alu_top_module' of instances=225 and nets=261 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design alu_top_module.
+RC Extraction called in multi-corner(2) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:01.0  MEM: 1120.949M)
+AAE DB initialization (MEM=1152.89 CPU=0:00:00.1 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: alu_top_module
+# Design Mode: 45nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=1152.89)
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5506__5266/AN voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5516__1786/B voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5522__6877/AN voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5397__2250/A voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5392__5703/A0 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5384__8757/A voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5378__2391/A voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5376__1840/B0 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[7], driver A7/Y voltage 0.9 does not match receiver top1/g5398__7344/A1 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5521__7114/B voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5511__2391/B voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5413__2900/B voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5395__5019/A voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5399__7344/A0 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5415__2703/A1 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5404__1309/A1N voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5366__5266/B0 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[6], driver A6/Y voltage 0.9 does not match receiver top1/g5361__6877/B0 voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[5], driver A5/Y voltage 0.9 does not match receiver top1/g5531/A voltage 3.3.
+**WARN: (IMPMSMV-1810):	Net A_out[5], driver A5/Y voltage 0.9 does not match receiver top1/g5419__5953/A voltage 3.3.
+**WARN: (EMS-27):	Message (IMPMSMV-1810) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Total number of fetched objects 278
+End delay calculation. (MEM=1247.33 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1235.79 CPU=0:00:00.2 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.3 real=0:00:00.0 totSessionCpu=0:04:31 mem=1235.8M)
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
+Setup views included:
+ view_slow 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |  0.000  |
+|           TNS (ns):|  0.000  |   N/A   |  0.000  |
+|    Violating Paths:|    0    |   N/A   |    0    |
+|          All Paths:|    0    |   N/A   |    0    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |     10 (29)      |   -0.637   |     10 (29)      |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 0.114%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+Reported timing to dir ../new_output
+Total CPU time: 1.09 sec
+Total Real time: 1.0 sec
+Total Memory Usage: 1186.089844 Mbytes
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD GND } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+*** Begin SPECIAL ROUTE on Thu Dec 11 15:47:40 2025 ***
+SPECIAL ROUTE ran on directory: /home/user19/entc21_dicd/210421E/Assignment/work
+SPECIAL ROUTE ran on machine: aed (Linux 3.10.0-1160.108.1.el7.x86_64 x86_64 3.76Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD GND"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 11
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 11
+srouteTopTargetLayerLimit set to 11
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2046.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
+Read in 24 layers, 11 routing layers, 1 overlap layer
+Read in 2 nondefault rules, 0 used
+Read in 590 macros, 50 used
+Read in 225 components
+  183 core components: 0 unplaced, 183 placed, 0 fixed
+  38 pad components: 0 unplaced, 0 placed, 38 fixed
+  4 other components: 0 unplaced, 0 placed, 4 fixed
+Read in 38 logical pins
+Read in 38 nets
+Read in 5 special nets, 2 routed
+Read in 343 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1254):	Cannot find any block pin of net VDD. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VDD. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1253):	Cannot find any standard cell pin connected to net GND.
+Run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND'.
+**WARN: (IMPSR-1254):	Cannot find any block pin of net GND. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net GND. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net GND. Check net list, or change port class in the technology file, or change option to include pin in given range.
+CPU time for FollowPin 0 seconds
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net GND.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net GND.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.41, 844.87) (830.59, 844.99).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.38, 844.87) (830.62, 844.99).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via3 at (830.18, 841.45) (830.43, 841.57).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.66, 759.37) (830.84, 759.49).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.63, 759.37) (830.87, 759.49).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.66, 667.03) (830.84, 667.15).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.63, 667.03) (830.87, 667.15).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.66, 502.87) (830.84, 502.99).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.63, 502.87) (830.87, 502.99).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.66, 410.53) (830.84, 410.65).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.63, 410.53) (830.87, 410.65).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via3 at (830.18, 328.45) (830.43, 328.57).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.41, 325.03) (830.59, 325.15).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via4 at (830.38, 325.03) (830.62, 325.15).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via7 at (269.64, 844.85) (269.77, 845.01).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via7 at (269.58, 844.87) (269.82, 844.99).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via2 at (269.77, 841.45) (270.02, 841.57).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via5 at (269.28, 759.37) (269.45, 759.49).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via5 at (269.24, 759.37) (269.48, 759.49).
+**WARN: (IMPPP-531):	ViaGen Warning: MAXVIASTACK rule violation, no via created on layer Via5 at (269.28, 667.03) (269.45, 667.15).
+**WARN: (EMS-27):	Message (IMPPP-531) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 724
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Pad Ring connections: 48
+  Number of Followpin connections: 362
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 2048.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 8 via definition ...
+
+sroute post-processing starts at Thu Dec 11 15:47:40 2025
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Thu Dec 11 15:47:40 2025
+sroute created 1204 wires.
+ViaGen created 4942 vias, deleted 4 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal1 |      1116      |       NA       |
+|  Via1  |       716      |        0       |
+| Metal2 |       10       |       NA       |
+|  Via2  |       708      |        0       |
+| Metal3 |       10       |       NA       |
+|  Via3  |       704      |        0       |
+| Metal4 |       46       |       NA       |
+|  Via4  |       704      |        0       |
+|  Via5  |       704      |        0       |
+|  Via6  |       704      |        0       |
+|  Via7  |       684      |        4       |
+| Metal8 |        4       |       NA       |
+|  Via8  |       18       |        0       |
+| Metal9 |       18       |       NA       |
++--------+----------------+----------------+
+<CMD> getSrouteMode -allowWrongWayRoute -quiet
+<CMD> getSrouteMode -viaThruToClosestRing -quiet
+<CMD> getSrouteMode -extendNearestTarget -quiet
+<CMD> getSrouteMode -targetNumber -quiet
+<CMD> getSrouteMode -targetSearchDistance -quiet
+<CMD> getSrouteMode -jogThresholdRatio -quiet
+<CMD> getSrouteMode -blockPinConnectRingPinCorners -quiet
+<CMD> getSrouteMode -blockPinRouteWithPinWidth -quiet
+<CMD> getSrouteMode -padPinMinViaSize -quiet
+<CMD> getSrouteMode -padPinSplit -quiet
+<CMD> getSrouteMode -padRingLefConvention -quiet
+<CMD> getSrouteMode -signalPinAsPG -quiet
+<CMD> getSrouteMode -corePinJoinLimit -quiet
+<CMD> getSrouteMode -corePinLength -quiet
+<CMD> getSrouteMode -corePinLengthAsInstance -quiet
+<CMD> getSrouteMode -corePinReferenceMacro -quiet
+<CMD> getSrouteMode -treatEndcapAsCore -quiet
+<CMD> getSrouteMode -secondaryPinMaxGap -quiet
+<CMD> getSrouteMode -secondaryPinRailWidth -quiet
+<CMD> getSrouteMode -srpgAonCellPin -quiet
+<CMD> getSrouteMode -viaConnectToShape -quiet
+<CMD> getSrouteMode -layerNormalCost -quiet
+<CMD> getSrouteMode -layerWrongWayCost -quiet
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 15:49:22, mem=966.9M)
+Runtime...
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 15:49:22, total cpu=0:00:00.1, real=0:00:00.0, peak res=966.9M, current mem=958.0M)
+
+<CMD> setLayerPreference pgPower -isVisible 0
+<CMD> setLayerPreference pgPower -isVisible 1
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference node_net -isVisible 1
+<CMD> setLayerPreference node_net -isVisible 0
+<CMD> setLayerPreference node_net -isVisible 1
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 15:51:02, mem=958.0M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 15:51:02, total cpu=0:00:00.1, real=0:00:00.0, peak res=961.0M, current mem=961.0M)
+
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 15:55:55, mem=961.0M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 15:55:55, total cpu=0:00:00.1, real=0:00:00.0, peak res=961.1M, current mem=961.1M)
+
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 15:56:58, mem=961.1M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 15:56:58, total cpu=0:00:00.1, real=0:00:00.0, peak res=961.1M, current mem=961.1M)
+
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 15:59:27, mem=961.1M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 15:59:27, total cpu=0:00:00.2, real=0:00:00.0, peak res=961.1M, current mem=961.1M)
+
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 16:01:27, mem=961.1M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 16:01:27, total cpu=0:00:00.1, real=0:00:00.0, peak res=961.3M, current mem=961.3M)
+
+<CMD> ccopt_design
+#% Begin ccopt_design (date=12/11 16:09:18, mem=961.4M)
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): SDC
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+**ERROR: (IMPCCOPT-4082):	No timing clocks found therefore cannot extract clock trees. An SDC file should be loaded.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-2004):	Cannot run CCOpt as no clock trees are defined.
+Check Prerequisites done. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization done. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPCCOPT-4082        1  No timing clocks found therefore cannot ...
+*** Message Summary: 0 warning(s), 3 error(s)
+
+#% End ccopt_design (date=12/11 16:09:18, total cpu=0:00:00.1, real=0:00:00.0, peak res=961.5M, current mem=961.5M)
+

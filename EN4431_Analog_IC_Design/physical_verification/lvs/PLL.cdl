@@ -1,0 +1,171 @@
+
+
+***********************************************************
+* CDL produced by pvsBuildNetlist on Jun 22 01:52:11 2026 *
+***********************************************************
+
+
+*pvsViewList = auCdl schematic
+*pvsStopList = ("auCdl")
+*pvsSimName  = auCdl
+
+
+
+*.EXPAND_ON_M_FACTOR
+*.MEGA
+
+*.GLOBAL
++  VSS!
++  VDD!
+
+
+
+
+.subckt DFFRX1_LP CK D Q QN RN VDD VSS
+*PVSCELL netlisted from sky130_scl_9T_LP DFFRX1_LP schematic
+*.INHEXPR VSS VSS VSS!
+*.INHEXPR VDD VDD VDD!
+*.connect VSS VSS!
+*.connect VDD VDD!
+  Mmn20 CKb CK VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn21 CKbb CKb VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn25 n21 D VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn26 n20 CKb n21 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn30 mout n20 VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn35 n27 RN VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn36 n25 mout n27 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn37 n20 CKbb n25 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn40 n30 CKbb mout VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn45 n35 RN VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn46 qbint n30 n35 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn50 n40 qbint VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn51 n30 CKb n40 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn55 Q qbint VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn56 qint qbint VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn57 QN qint VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmp20 CKb CK VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp21 CKbb CKb VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp25 n22 D VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp26 n20 CKbb n22 VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp30 mout n20 VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp35 n26 RN VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp36 n26 mout VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp37 n20 CKb n26 VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp40 n30 CKb mout VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp45 qbint RN VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp46 qbint n30 VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp50 n41 qbint VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp51 n30 CKbb n41 VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp55 Q qbint VDD! VDD! pfet_01v8_hvt M=1 L=150n W=620n
+  Mmp56 qint qbint VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp57 QN qint VDD! VDD! pfet_01v8_hvt M=1 L=150n W=620n
+.ends DFFRX1_LP
+
+
+.subckt NAND2X1_LP A B VDD VSS Y
+*PVSCELL netlisted from sky130_scl_9T_LP NAND2X1_LP schematic
+*.INHEXPR VSS VSS VSS!
+*.INHEXPR VDD VDD VDD!
+*.connect VSS VSS!
+*.connect VDD VDD!
+  Mmn0 n0 A VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn1 Y B n0 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmp0 Y A VDD! VDD! pfet_01v8_hvt M=1 L=150n W=620n
+  Mmp1 Y B VDD! VDD! pfet_01v8_hvt M=1 L=150n W=620n
+.ends NAND2X1_LP
+
+
+.subckt PFD Qa Qb vdd vfb vref
+*PVSCELL netlisted from Epitaxc_new PFD schematic
+  XI0 DFFRX1_LP $PINS CK=vref D=vdd Q=Qa QN=net4 RN=net1
+  XI1 DFFRX1_LP $PINS CK=vfb D=vdd Q=Qb QN=net5 RN=net1
+  XI2 NAND2X1_LP $PINS A=Qa B=Qb Y=net1
+.ends PFD
+
+
+.subckt Charge_Pump down out up vdd vss
+*PVSCELL netlisted from Epitaxc_new Charge_Pump schematic
+  MNM0 net023 vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM2 net16 vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM3 vdd vdd vss vss nfet_01v8_lvt M=1 L=10u W=1u
+  MNM6 out down net023 vss nfet_01v8_lvt M=1 L=150n W=420n
+  MNM7 net24 up vss vss nfet_01v8_lvt M=1 L=150n W=420n
+  MPM0 net021 net16 vdd vdd pfet_01v8_lvt M=1 L=10u W=2u
+  MPM2 net16 net16 vdd vdd pfet_01v8_lvt M=1 L=10u W=2u
+  MPM4 out net24 net021 vdd pfet_01v8_lvt M=1 L=350n W=550n
+  MPM5 net24 up vdd vdd pfet_01v8_lvt M=1 L=350n W=550n
+.ends Charge_Pump
+
+
+.subckt Current_trarved_ring_VCO vdd vin vout vss
+*PVSCELL netlisted from Epitaxc_new Current_trarved_ring_VCO schematic
+  MNM0 net024 net028 net15 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM1 net15 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM10 vn vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM11 vout net028 vss vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM17 net042 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM18 net053 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM19 net029 net027 net042 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM2 net018 net024 net019 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM20 net028 net029 net053 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM21 vp vin vss vss nfet_01v8_lvt M=1 L=1u W=90u
+  MNM3 net019 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM4 net027 net018 net040 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM5 net040 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MPM0 net16 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM1 net024 net028 net16 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM10 vn vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM11 vout net028 vdd vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM17 net029 net027 net041 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM18 net028 net029 net055 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM19 net055 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM2 net017 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM20 net041 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM21 vp vp vdd vdd pfet_01v8_lvt M=1 L=1u W=8u
+  MPM3 net018 net024 net017 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM4 net039 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM5 net027 net018 net039 vdd pfet_01v8_lvt M=1 L=1u W=6u
+.ends Current_trarved_ring_VCO
+
+
+.subckt AND2X1_LP A B VDD VSS Y
+*PVSCELL netlisted from sky130_scl_9T_LP AND2X1_LP schematic
+*.INHEXPR VSS VSS VSS!
+*.INHEXPR VDD VDD VDD!
+*.connect VSS VSS!
+*.connect VDD VDD!
+  Mmn0 net127 B VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn1 n0 A net127 VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmn2 Y n0 VSS! VSS! nfet_01v8 M=1 L=150n W=420n
+  Mmp0 n0 A VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp1 n0 B VDD! VDD! pfet_01v8_hvt M=1 L=150n W=540n
+  Mmp2 Y n0 VDD! VDD! pfet_01v8_hvt M=1 L=150n W=620n
+.ends AND2X1_LP
+
+
+.subckt freq_div clk_in clk_out rst
+*PVSCELL netlisted from Epitaxc_new freq_div schematic
+  XI19 AND2X1_LP $PINS A=net3 B=net10 Y=net4
+  XI0 DFFRX1_LP $PINS CK=clk_in D=net3 Q=net10 QN=net21 RN=rst
+  XI4 DFFRX1_LP $PINS CK=clk_in D=net4 Q=net22 QN=net3 RN=rst
+  XI5 DFFRX1_LP $PINS CK=net22 D=net13 Q=net20 QN=net25 RN=rst
+  XI6 DFFRX1_LP $PINS CK=net22 D=net20 Q=net7 QN=net13 RN=rst
+  XI7 DFFRX1_LP $PINS CK=net7 D=net15 Q=net19 QN=net24 RN=rst
+  XI8 DFFRX1_LP $PINS CK=net7 D=net19 Q=clk_out QN=net15 RN=rst
+.ends freq_div
+
+
+.subckt PLL C1 C2 VDD! VSS! vfvout vref
+*PVSCELL netlisted from Epitaxc_new PLL schematic
+  XI1 Charge_Pump $PINS down=net9 out=net06 up=net8 vdd=VDD! vss=VSS!
+  XI2 Current_trarved_ring_VCO $PINS vdd=VDD! vin=C2 vout=vfvout vss=VSS!
+  XI0 PFD $PINS Qa=net8 Qb=net9 vdd=VDD! vfb=net5 vref=vref
+  XI3 freq_div $PINS clk_in=vfvout clk_out=net5 rst=VDD!
+  RR0 net06 C1 res_generic_pd $SUB=VDD! r=3.94K w=1u l=20u
+  RR2 net06 C2 res_generic_pd $SUB=VDD! r=656.667 w=1.5u l=5u
+.ends PLL
+
+
+***********************************************************
+*             Completed at Jun 22 01:52:11 2026           *
+***********************************************************

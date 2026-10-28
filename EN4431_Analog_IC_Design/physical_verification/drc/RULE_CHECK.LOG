@@ -1,0 +1,111 @@
+********************************************************************************
+pvs 16.10-p006 64 bit (Thu Jul 27 18:05:02 PDT 2017)
+Build Ref No.: 006 Production (07-27-2017) [pvs_1610]
+
+Copyright 2017 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     aed (Linux x86_64 3.10.0-1160.108.1.el7.x86_64)
+Process Id:      24499
+Starting Time:   Sun Jun 21 15:03:33 2026 (Sun Jun 21 09:33:33 2026 GMT)
+With parameters: -drc -get_rules /tmp/pvsrng.4905@aed.1 -tc top -gds /dev/null -get_options /tmp/pvsoptpar.4905@aed.1 -gen_tags /tmp/pvsgentags.4905@aed.1 -control /tmp/ipvsRulesCheckControl.4905@aed.1 /home/user19/PLL_421E/drc/.config.rul.4905@aed.1 /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_DRC/sky130_rev_0.0_2.12.drc.pvl 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
+    cpu MHz         :  3765.234
+    cache size      :  8192 KB
+    physical cores  :  4
+    logical cores   :  8
+    hyper-threading on
+
+Memory info:
+    31920M physical memory installed.
+
+    MemTotal:       32689656 kB
+    MemFree:          431132 kB
+    MemAvailable:    5444108 kB
+    Buffers:               0 kB
+    Cached:          6710064 kB
+    SwapCached:        24768 kB
+    Active:         26004828 kB
+    Inactive:        3795568 kB
+    Active(anon):   23073544 kB
+    Inactive(anon):  2042596 kB
+    Active(file):    2931284 kB
+    Inactive(file):  1752972 kB
+    Unevictable:       23588 kB
+    Mlocked:               0 kB
+    SwapTotal:       8191996 kB
+    SwapFree:        7382524 kB
+    Dirty:               736 kB
+    Writeback:             0 kB
+    AnonPages:      23097036 kB
+    Mapped:          1077268 kB
+    Shmem:           2025808 kB
+    Slab:            1114016 kB
+    SReclaimable:     729392 kB
+    SUnreclaim:       384624 kB
+    KernelStack:       69936 kB
+    PageTables:       555256 kB
+    NFS_Unstable:          0 kB
+    Bounce:                0 kB
+    WritebackTmp:          0 kB
+    CommitLimit:    24536824 kB
+    Committed_AS:   55042168 kB
+    VmallocTotal:   34359738367 kB
+    VmallocUsed:      398492 kB
+    VmallocChunk:   34358947836 kB
+    Percpu:             1504 kB
+    HardwareCorrupted:     0 kB
+    AnonHugePages:   9070592 kB
+    CmaTotal:              0 kB
+    CmaFree:               0 kB
+    HugePages_Total:       0
+    HugePages_Free:        0
+    HugePages_Rsvd:        0
+    HugePages_Surp:        0
+    Hugepagesize:       2048 kB
+    DirectMap4k:      108468 kB
+    DirectMap2M:     6092800 kB
+    DirectMap1G:    27262976 kB
+
+
+########################################################################
+Get environment info ...
+########################################################################
+ENV VAR: TCL_LIBRARY = /home/aed/cadence/PVS161/share/lib/tcltk/08.64/tcl8.6
+ENV VAR: TCLX_LIBRARY = /home/aed/cadence/PVS161/share/lib/tclx/08.40
+ENV VAR: TCLLIBPATH = /home/aed/cadence/PVS161/share/lib/itcl/3.4.1 /home/aed/cadence/PVS161/share/lib/tclxml/3.2 /home/aed/cadence/PVS161/share/lib/tcllib/1.18 /home/aed/cadence/PVS161/share/lib/itcl/3.4.1 /home/aed/cadence/PVS161/share/lib/tclxml/3.2 /home/aed/cadence/PVS161/share/lib/tcllib/1.18 
+
+
+########################################################################
+Parsing Control File /tmp/ipvsRulesCheckControl.4905@aed.1 ...
+########################################################################
+#DEFINE NODEN
+#UNDEFINE NOGLR
+#UNDEFINE NOWARN
+#UNDEFINE SRAM
+RESULTS_DB -drc "/home/user19/PLL_421E/drc/freq_div.drc_errors.ascii" -ascii;
+
+########################################################################
+Parsing Rule File /home/user19/PLL_421E/drc/.config.rul.4905@aed.1 ...
+########################################################################
+
+########################################################################
+Parsing Rule File /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_DRC/sky130_rev_0.0_2.12.drc.pvl ...
+########################################################################
+ERROR: [Input] Environment variable 'PEGASUS_DRC' is not defined.
+Please define this envrionment variable and restart the program
+
+Execution aborted.  Exiting with status 1.
+
+
+Design Rule Check Finished Abnormally. Sun Jun 21 15:03:33 2026
+
+

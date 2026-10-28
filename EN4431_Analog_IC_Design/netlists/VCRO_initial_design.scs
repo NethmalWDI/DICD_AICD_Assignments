@@ -1,0 +1,83 @@
+// Generated for: spectre
+// Generated on: Apr 12 21:56:47 2026
+// Design library name: PLL_421E
+// Design cell name: inv_sim
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters vctr=0.9 _gpar1=1 CNL=350n CNW=750n CPL=350n CPW=1.5u INL=350n \
+    INW=3u IPL=350n IPW=6u nf=1 nfn=1
+include "/home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/models/sky130.lib.spice"
+include "/home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/models/corners/tt.spice"
+
+// Library name: PLL_421E
+// Cell name: inverter
+// View name: schematic
+subckt inverter NB PB VN VP Vin Vout
+    PM0 (Vout Vin VP PB) pfet_01v8_lvt w=(IPW/nf) l=IPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(nf)
+    NM0 (Vout Vin VN NB) nfet_01v8_lvt w=(INW/nfn) l=INL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(nfn)
+ends inverter
+// End of subcircuit definition.
+
+// Library name: PLL_421E
+// Cell name: inv_sim
+// View name: schematic
+NM12 (net14 NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+NM11 (net13 NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+NM10 (net027 NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+NM9 (net024 NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+NM8 (Vout net015 0 0) nfet_01v8_lvt w=(1.5u) l=350n as=111.3f ad=111.3f \
+        ps=1.37u pd=1.37u m=(1)*(1)
+NM7 (net021 NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+NM1 (PBias NBias 0 0) nfet_01v8_lvt w=(CNW/_gpar1) l=CNL as=111.3f \
+        ad=111.3f ps=1.37u pd=1.37u m=(1)*(_gpar1)
+I10 (0 net3 net021 net020 net022 net015) inverter
+I9 (0 net3 net024 net025 net023 net022) inverter
+I8 (0 net3 net027 net026 net028 net023) inverter
+I7 (0 net3 net13 net15 net029 net028) inverter
+I6 (0 net3 net14 net16 net015 net029) inverter
+PM8 (Vout net015 net3 net3) pfet_01v8_lvt w=(3u) l=350n as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM7 (net020 PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM6 (net025 PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM5 (net026 PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM4 (net15 PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM3 (net16 PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+PM0 (PBias PBias net3 net3) pfet_01v8_lvt w=(550n) l=CPL as=145.75f \
+        ad=145.75f ps=1.63u pd=1.63u m=(1)*(1)
+V3 (NBias 0) vsource dc=vctr type=dc
+V2 (net3 0) vsource dc=1.8 type=dc
+C0 (Vout 0) capacitor c=50f
+ic net015=0 
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=1u errpreset=moderate write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+pss  (  Vout  0  )  pss  fund=101M  harms=30  errpreset=conservative
++    tstab=15n  annotate=status
+pnoise  (  Vout  0  )  pnoise  sweeptype=relative  relharmnum=1
++       start=1m  stop=2M  pnoisemethod=fullspectrum  noisetype=timeaverage
++       noiseout=[am  pm  usb  lsb]  annotate=status
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save Vout 
+saveOptions options save=all pwr=all

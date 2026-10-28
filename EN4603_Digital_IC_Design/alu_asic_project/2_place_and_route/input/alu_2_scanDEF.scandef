@@ -1,0 +1,27 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN alu_top_module ;
+
+SCANCHAINS 1 ;
+  - chain_1_seg1_clk_rising 
+    + PARTITION p_clk_rising 
+      MAXBITS 10
+    + START PIN scan_in_in
+    + FLOATING 
+       top1/flag_carry_reg ( IN SI ) ( OUT Q ) 
+       top1/flag_zero_reg ( IN SI ) ( OUT Q ) 
+       top1/result_reg[0] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[1] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[2] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[3] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[4] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[5] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[6] ( IN SI ) ( OUT Q ) 
+       top1/result_reg[7] ( IN SI ) ( OUT Q ) 
+    + STOP PIN scan_out_out
+;
+
+END SCANCHAINS 
+END DESIGN 

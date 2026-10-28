@@ -1,0 +1,9 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary PFD
+vref 3 vref 155 9445 met1
+Qa 6 Qa 15945 7685 met1
+vfb 1 vfb 160 4480 met1
+VDD! 7 VDD! 120 11100 met1
+vdd 2 vdd 155 8430 met1
+Qb 5 Qb 15955 6955 met1
+VSS! 8 VSS! 120 6965 met1

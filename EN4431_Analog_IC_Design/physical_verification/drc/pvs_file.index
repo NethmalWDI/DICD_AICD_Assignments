@@ -1,0 +1,59 @@
+"Cadence Directory" internal none /home/user19/.cadence/
+"Current Directory" internal none /home/user19
+"GUI Flow" internal none virtuoso6
+"GUI Preset" internal none /home/user19/PLL_421E/drc/.preset.autosave
+"Job Signature" internal none IPVS_1782069292_4905
+"PVS Job Mode" internal none drc
+"Run Directory" internal none /home/user19/PLL_421E/drc
+"PVS Version" internal none 16.10-p006
+"Binary Name" internal none pvsgui
+"PVS Build Date" internal none "Thu Jul 27 18:05:02 PDT 2017"
+"PVS Job Time" internal none 1782069295
+"Control File" input text /home/user19/PLL_421E/drc/pvsdrcctl
+"DFII version" internal none 6.1.7.0
+"Do not check rules files before run" internal none ENABLED
+"Input Layout" input none OA: Epitaxc_new PLL layout
+"Intermediate GDSII File" output none /home/user19/PLL_421E/drc/PLL.gds
+"Intermediate GDSII File creation Errors" output none /home/user19/PLL_421E/drc/PIPO1.LOG
+"Intermediate OASIS File creation Errors" output none /home/user19/PLL_421E/drc/PIPO1.LOG
+"Job Signature" internal none IPVS_1782069292_4905
+"Layout Cell Name" internal none PLL
+"Layout ConvertPin" internal text geometry
+"Layout GDSII" input none /home/user19/PLL_421E/drc/PLL.gds
+"Layout HierDepth" internal none 32
+"Layout Library Name" internal none Epitaxc_new
+"Layout MaxVertices" internal none 2048
+"Layout NoConvertHalfWidthPath" input none nil
+"Layout ReplaceBusBitChar" input none nil
+"Layout Scale" internal none 0.001
+"Layout TechLib" internal none sky130_fd_pr_main
+"Layout Top Cell" internal none PLL
+"Layout View Name" internal none layout
+"Output Layout Cellmap I" internal text /home/user19/PLL_421E/drc/lay_cellMap.txt
+"PIPO Log I" log text  /home/user19/PLL_421E/drc/PIPO1.LOG
+"PIPO Output I" internal text  /home/user19/PLL_421E/drc/PIPO1.OUT
+"PIPO Setup File I" internal text  /home/user19/PLL_421E/drc/pipo1.setup
+"PVS Job Log" log text /home/user19/PLL_421E/drc/pvsuidrc.log
+"PVS Job Mode" internal none drc
+"Rule File" input text /home/user19/PLL_421E/drc/.config.rul
+"Rule File" input text /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_DRC/sky130_rev_0.0_2.12.drc.pvl
+"Run Directory" internal none /home/user19/PLL_421E/drc
+"TTE mode" internal none ENABLED
+"PVS Version" internal none 16.10-p006
+"Binary Name" internal none pvsvirt
+"PVS Build Date" internal none "Thu Jul 27 18:05:02 PDT 2017"
+"PVS Job Time" internal none 1782069295
+"ASCII DRC Report Database" output rdb /home/user19/PLL_421E/drc/PLL.drc_errors.ascii
+"DRC Summary" output text /home/user19/PLL_421E/drc/PLL.sum
+"Layout GDSII" input none /home/user19/PLL_421E/drc/PLL.gds
+"PVS Job Mode" internal none drc
+"Report MaxResults" internal none 1000
+"Rule File" input text /home/user19/PLL_421E/drc/.config.rul
+"Rule File" input text /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_DRC/sky130_rev_0.0_2.12.drc.pvl
+"Run Directory" internal none /home/user19/PLL_421E/drc/
+"TTE mode" internal none ENABLED
+"UI Data" internal none ENABLED
+"PVS Version" internal none 16.10-p006
+"Binary Name" internal none pvs
+"PVS Build Date" internal none "Thu Jul 27 18:05:02 PDT 2017"
+"PVS Job Time" internal none 1782069295

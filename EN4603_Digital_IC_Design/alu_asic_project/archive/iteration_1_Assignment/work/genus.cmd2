@@ -1,0 +1,15 @@
+# Cadence Genus(TM) Synthesis Solution, Version 18.10-p003_1, built Jun  7 2018 23:53:27
+
+# Date: Thu Dec 11 21:14:47 2025
+# Host: aed (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz 8192KB)
+# OS:   CentOS Linux release 7.9.2009 (Core)
+
+source ../input/setup.tcl
+read_hdl [glob ../input/rtl/*.v]
+elaborate alu_top_innovus
+elaborate alu_top_innovus.v
+elaborate alu_top_innovus
+source ../input/setup.tcl
+elaborate alu_top_wrap_2
+read_hdl [glob ../input/*.v]
+read_hdl [glob ../input/rtl/*.v]

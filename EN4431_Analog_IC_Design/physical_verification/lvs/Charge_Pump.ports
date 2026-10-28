@@ -1,0 +1,12 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary Charge_Pump
+out 6 out 18985 15090 met1
+out 6 out 19072 15102 met1
+down 9 down 5620 12955 met1
+down 9 down 5705 12965 met1
+vss 1 vss 6845 2885 met1
+vss 1 vss 12717 3035 met1
+up 7 up 5830 16735 met1
+up 7 up 5885 16805 met1
+vdd 5 vdd 7100 27345 met1
+vdd 5 vdd 7315 27550 met1

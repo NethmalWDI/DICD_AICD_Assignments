@@ -1,0 +1,11 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary PLL
+C2 3 C2 -95262 69230 met2_in
+VSS! 6 VSS! -43755 9572 met2_in
+VSS! 6 VSS! -43285 7910 met2_in
+VDD! 4 VDD! -48000 67137 met2_in
+VDD! 4 VDD! -47400 66715 met2_in
+vfvout 5 vfvout -47267 33370 met2_in
+vfvout 5 vfvout -47260 33195 met2_in
+vref 11 vref -140497 39425 met2_in
+C1 8 C1 -103220 69320 met2_in

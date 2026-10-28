@@ -1,0 +1,28 @@
+# Normalise text files, keep EDA binaries untouched
+* text=auto
+
+*.v        text eol=lf
+*.sv       text eol=lf
+*.tcl      text eol=lf
+*.sdc      text eol=lf
+*.io       text eol=lf
+*.view     text eol=lf
+*.scandef  text eol=lf
+*.cdl      text eol=lf
+*.spi      text eol=lf
+*.scs      text eol=lf
+*.sh       text eol=lf
+*.md       text
+
+*.pdf      binary
+*.png      binary
+*.gds      binary
+*.oa       binary
+*.dm       binary
+*.gz       binary
+
+# GitHub language stats: count RTL, hide generated reports/netlists
+**/report/**        linguist-generated
+**/output/**        linguist-generated
+**/physical_verification/** linguist-generated
+**/archive/**       linguist-vendored

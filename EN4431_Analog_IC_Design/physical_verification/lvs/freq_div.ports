@@ -1,0 +1,7 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary freq_div
+clk_in 12 clk_in -25 28490 met1
+clk_out 16 clk_out 30845 10585 met1
+VDD! 4 VDD! 75 7270 met1
+rst 2 rst 12805 7280 met1
+VSS! 5 VSS! 1775 8155 met1

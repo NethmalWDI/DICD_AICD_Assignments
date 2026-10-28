@@ -1,0 +1,171 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.7-64b 12/01/2016 05:40 (sjfhw306) $
+          : sub-version  IC6.1.7-64b.500.8 
+Started at: 22-Jun-2026  01:52:12
+User Name : user19
+Host Name : aed
+Directory : /home/user19
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/user19/PLL_421E/lvs/PLL.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /home/user19/sky130_fd_pr_main/sky130_fd_pr_main.layermap
+INFO (XSTRM-162): You have not used the viaMap option. If the OpenAccess design has native oaVia instances, use the -viaMap option for preserving oaVia instances in a Stream Out - Stream In round trip. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design.  For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options :
+library                                 Epitaxc_new
+strmFile                                /home/user19/PLL_421E/lvs/PLL.gds
+topCell                                 PLL
+view                                    layout
+runDir                                  /home/user19/PLL_421E/lvs
+logFile                                 /home/user19/PLL_421E/lvs/PIPO1.LOG
+techLib                                 sky130_fd_pr_main
+hierDepth                               32
+maxVertices                             2048
+layerMap                                /home/user19/sky130_fd_pr_main/sky130_fd_pr_main.layermap
+userSkillFile                           /home/user19/PLL_421E/lvs/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+convertPin                              geometryAndText
+
+INFO (XSTRM-223): 1. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$1.
+INFO (XSTRM-223): 2. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$2.
+INFO (XSTRM-223): 3. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$3.
+INFO (XSTRM-223): 4. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$4.
+INFO (XSTRM-223): 5. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$5.
+INFO (XSTRM-223): 6. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$6.
+INFO (XSTRM-223): 7. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$7.
+INFO (XSTRM-223): 8. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$8.
+INFO (XSTRM-223): 9. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$9.
+INFO (XSTRM-223): 10. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$10.
+INFO (XSTRM-223): 11. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$11.
+INFO (XSTRM-223): 12. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$12.
+INFO (XSTRM-223): 13. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$13.
+INFO (XSTRM-223): 14. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$14.
+INFO (XSTRM-223): 15. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$15.
+INFO (XSTRM-223): 16. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$16.
+INFO (XSTRM-223): 17. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$17.
+INFO (XSTRM-223): 18. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$18.
+INFO (XSTRM-223): 19. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$19.
+INFO (XSTRM-223): 20. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$20.
+INFO (XSTRM-223): 21. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$21.
+INFO (XSTRM-223): 22. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$22.
+INFO (XSTRM-223): 23. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$23.
+INFO (XSTRM-223): 24. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$24.
+INFO (XSTRM-223): 25. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$25.
+INFO (XSTRM-223): 26. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$26.
+INFO (XSTRM-223): 27. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$27.
+INFO (XSTRM-223): 28. Translating cellView sky130_fd_pr_main/subTap/layout as STRUCTURE subTap$$28.
+INFO (XSTRM-223): 29. Translating cellView sky130_fd_pr_main/nwellTap/layout as STRUCTURE nwellTap$$29.
+INFO (XSTRM-223): 30. Translating cellView sky130_fd_pr_main/subTap/layout as STRUCTURE subTap$$30.
+INFO (XSTRM-223): 31. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$31.
+INFO (XSTRM-223): 32. Translating cellView sky130_fd_pr_main/PYL1CON_C/layout as STRUCTURE PYL1CON_C$$32.
+INFO (XSTRM-223): 33. Translating cellView sky130_fd_pr_main/pfet_01v8_lvt/layout as STRUCTURE pfet_01v8_lvt$$33.
+INFO (XSTRM-223): 34. Translating cellView sky130_fd_pr_main/nfet_01v8_lvt/layout as STRUCTURE nfet_01v8_lvt$$34.
+INFO (XSTRM-223): 35. Translating cellView sky130_fd_pr_main/nfet_01v8_lvt/layout as STRUCTURE nfet_01v8_lvt$$35.
+INFO (XSTRM-223): 36. Translating cellView sky130_fd_pr_main/pfet_01v8_lvt/layout as STRUCTURE pfet_01v8_lvt$$36.
+INFO (XSTRM-223): 37. Translating cellView Epitaxc_new/Charge_Pump/layout as STRUCTURE Charge_Pump.
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-223): 38. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$37.
+INFO (XSTRM-223): 39. Translating cellView sky130_fd_pr_main/M1M2_C/layout as STRUCTURE M1M2_C$$38.
+INFO (XSTRM-223): 40. Translating cellView sky130_fd_pr_main/M2M3_C/layout as STRUCTURE M2M3_C$$39.
+INFO (XSTRM-223): 41. Translating cellView sky130_fd_pr_main/LICONDIFF_C/layout as STRUCTURE LICONDIFF_C$$40.
+INFO (XSTRM-223): 42. Translating cellView sky130_fd_pr_main/PYL1CON_C/layout as STRUCTURE PYL1CON_C$$41.
+INFO (XSTRM-223): 43. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$42.
+INFO (XSTRM-223): 44. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$43.
+INFO (XSTRM-223): 45. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$44.
+INFO (XSTRM-223): 46. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$45.
+INFO (XSTRM-223): 47. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$46.
+INFO (XSTRM-223): 48. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$47.
+INFO (XSTRM-223): 49. Translating cellView sky130_scl_9T_LP/DFFRX1_LP/layout as STRUCTURE DFFRX1_LP.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (3820, 2600). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-223): 50. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$48.
+INFO (XSTRM-223): 51. Translating cellView sky130_scl_9T_LP/NAND2X1_LP/layout as STRUCTURE NAND2X1_LP.
+INFO (XSTRM-223): 52. Translating cellView Epitaxc_new/PFD/layout as STRUCTURE PFD.
+INFO (XSTRM-223): 53. Translating cellView sky130_fd_pr_main/nwellTap/layout as STRUCTURE nwellTap$$49.
+INFO (XSTRM-223): 54. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$50.
+INFO (XSTRM-223): 55. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$51.
+INFO (XSTRM-223): 56. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$52.
+INFO (XSTRM-223): 57. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$53.
+INFO (XSTRM-223): 58. Translating cellView sky130_fd_pr_main/polyConn/layout as STRUCTURE polyConn$$54.
+INFO (XSTRM-223): 59. Translating cellView sky130_fd_pr_main/L1M1_C/layout as STRUCTURE L1M1_C$$55.
+INFO (XSTRM-223): 60. Translating cellView sky130_fd_pr_main/pfet_01v8_lvt/layout as STRUCTURE pfet_01v8_lvt$$56.
+INFO (XSTRM-223): 61. Translating cellView sky130_fd_pr_main/pfet_01v8_lvt/layout as STRUCTURE pfet_01v8_lvt$$57.
+INFO (XSTRM-223): 62. Translating cellView sky130_fd_pr_main/nfet_01v8_lvt/layout as STRUCTURE nfet_01v8_lvt$$58.
+INFO (XSTRM-223): 63. Translating cellView sky130_fd_pr_main/nfet_01v8_lvt/layout as STRUCTURE nfet_01v8_lvt$$59.
+INFO (XSTRM-223): 64. Translating cellView sky130_fd_pr_main/pfet_01v8_lvt/layout as STRUCTURE pfet_01v8_lvt$$60.
+INFO (XSTRM-223): 65. Translating cellView sky130_fd_pr_main/nfet_01v8_lvt/layout as STRUCTURE nfet_01v8_lvt$$61.
+INFO (XSTRM-223): 66. Translating cellView Epitaxc_new/Current_trarved_ring_VCO/layout as STRUCTURE Current_trarved_ring_VCO.
+INFO (XSTRM-223): 67. Translating cellView Epitaxc_new/LICONDIFF_C$$13/layout as STRUCTURE LICONDIFF_C$$13.
+INFO (XSTRM-223): 68. Translating cellView Epitaxc_new/PYL1CON_C$$14/layout as STRUCTURE PYL1CON_C$$14.
+INFO (XSTRM-223): 69. Translating cellView Epitaxc_new/PYL1CON_C$$15/layout as STRUCTURE PYL1CON_C$$15.
+INFO (XSTRM-223): 70. Translating cellView Epitaxc_new/L1M1_C$$16/layout as STRUCTURE L1M1_C$$16.
+INFO (XSTRM-223): 71. Translating cellView Epitaxc_new/L1M1_C$$17/layout as STRUCTURE L1M1_C$$17.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'L1M1_C$$18' that has been changed to 'L1M1_C$$18_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 72. Translating cellView Epitaxc_new/L1M1_C$$18/layout as STRUCTURE L1M1_C$$18_0.
+INFO (XSTRM-223): 73. Translating cellView Epitaxc_new/L1M1_C$$19/layout as STRUCTURE L1M1_C$$19.
+INFO (XSTRM-223): 74. Translating cellView Epitaxc_new/L1M1_C$$20/layout as STRUCTURE L1M1_C$$20.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'L1M1_C$$21' that has been changed to 'L1M1_C$$21_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 75. Translating cellView Epitaxc_new/L1M1_C$$21/layout as STRUCTURE L1M1_C$$21_0.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'L1M1_C$$22' that has been changed to 'L1M1_C$$22_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 76. Translating cellView Epitaxc_new/L1M1_C$$22/layout as STRUCTURE L1M1_C$$22_0.
+INFO (XSTRM-223): 77. Translating cellView Epitaxc_new/DFFRX1_LP/layout as STRUCTURE DFFRX1_LP_1.
+INFO (XSTRM-223): 78. Translating cellView Epitaxc_new/LILICON_C$$23/layout as STRUCTURE LILICON_C$$23.
+INFO (XSTRM-223): 79. Translating cellView Epitaxc_new/AND2X1_LP/layout as STRUCTURE AND2X1_LP.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M1M2_C$$1' that has been changed to 'M1M2_C$$1_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 80. Translating cellView Epitaxc_new/M1M2_C$$1/layout as STRUCTURE M1M2_C$$1_0.
+INFO (XSTRM-223): 81. Translating cellView Epitaxc_new/M2M3_C$$2/layout as STRUCTURE M2M3_C$$2.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M1M2_C$$3' that has been changed to 'M1M2_C$$3_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 82. Translating cellView Epitaxc_new/M1M2_C$$3/layout as STRUCTURE M1M2_C$$3_0.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M1M2_C$$4' that has been changed to 'M1M2_C$$4_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 83. Translating cellView Epitaxc_new/M1M2_C$$4/layout as STRUCTURE M1M2_C$$4_0.
+INFO (XSTRM-223): 84. Translating cellView Epitaxc_new/M1M2_C$$5/layout as STRUCTURE M1M2_C$$5.
+INFO (XSTRM-223): 85. Translating cellView Epitaxc_new/M1M2_C$$6/layout as STRUCTURE M1M2_C$$6.
+INFO (XSTRM-223): 86. Translating cellView Epitaxc_new/M2M3_C$$7/layout as STRUCTURE M2M3_C$$7.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M2M3_C$$8' that has been changed to 'M2M3_C$$8_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 87. Translating cellView Epitaxc_new/M2M3_C$$8/layout as STRUCTURE M2M3_C$$8_0.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M2M3_C$$9' that has been changed to 'M2M3_C$$9_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 88. Translating cellView Epitaxc_new/M2M3_C$$9/layout as STRUCTURE M2M3_C$$9_0.
+INFO (XSTRM-223): 89. Translating cellView Epitaxc_new/M1M2_C$$10/layout as STRUCTURE M1M2_C$$10.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M1M2_C$$11' that has been changed to 'M1M2_C$$11_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 90. Translating cellView Epitaxc_new/M1M2_C$$11/layout as STRUCTURE M1M2_C$$11_0.
+WARNING (XSTRM-157): The 'poCellNameMap()' SKILL procedure has generated a structure name 'M1M2_C$$12' that has been changed to 'M1M2_C$$12_0' by the translator. This could be because multiple cells with the same cell name exist in different libraries, the same cell name has been mapped to multiple cell names, or the cell name length is greater than the '32' that was specified using the '-respectGDSIINameLimit' or '-gdsCellNameLength' option.
+INFO (XSTRM-223): 91. Translating cellView Epitaxc_new/M1M2_C$$12/layout as STRUCTURE M1M2_C$$12_0.
+INFO (XSTRM-223): 92. Translating cellView Epitaxc_new/freq_div/layout as STRUCTURE freq_div.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (31695, 18605). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (3075, 20900). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (1135, 22920). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-223): 93. Translating cellView sky130_fd_pr_main/res_generic_pd/layout as STRUCTURE res_generic_pd$$62.
+INFO (XSTRM-223): 94. Translating cellView sky130_fd_pr_main/res_generic_pd/layout as STRUCTURE res_generic_pd$$63.
+INFO (XSTRM-223): 95. Translating cellView Epitaxc_new/PLL/layout as STRUCTURE PLL.
+
+Summary of Objects Translated:
+	Scalar Instances:                       216
+	Array Instances:                        0
+	Polygons:                               39
+	Paths:                                  177
+	Rectangles:                             1705
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           175
+	Custom Vias:                            22
+	CdsGen Vias:                            0
+	Pathsegs:                               461
+	Text:                                   42
+	TextDisplay:                            5
+	Cells:                                  95
+
+Elapsed Time: 0.2s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 9448KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '11' warning(s) found.

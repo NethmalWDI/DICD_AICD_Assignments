@@ -1,0 +1,109 @@
+********************************************************************************
+pvs 16.10-p006 64 bit (Thu Jul 27 18:05:02 PDT 2017)
+Build Ref No.: 006 Production (07-27-2017) [pvs_1610]
+
+Copyright 2017 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     aed (Linux x86_64 3.10.0-1160.108.1.el7.x86_64)
+Process Id:      28112
+Starting Time:   Sun Jun 21 15:06:23 2026 (Sun Jun 21 09:36:23 2026 GMT)
+With parameters: -lvs -get_rules /tmp/pvsrng.4905@aed.1 -tc top -gds /dev/null -get_options /tmp/pvsoptpar.4905@aed.1 -gen_tags /tmp/pvsgentags.4905@aed.1 -stc top -cdl . -control /tmp/ipvsRulesCheckControl.4905@aed.1 /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_LVS/Sky130_PDK_Changes_for_LVS.pdf 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
+    cpu MHz         :  3753.613
+    cache size      :  8192 KB
+    physical cores  :  4
+    logical cores   :  8
+    hyper-threading on
+
+Memory info:
+    31920M physical memory installed.
+
+    MemTotal:       32689656 kB
+    MemFree:          363224 kB
+    MemAvailable:    5377632 kB
+    Buffers:               0 kB
+    Cached:          6707440 kB
+    SwapCached:        24820 kB
+    Active:         26076540 kB
+    Inactive:        3791160 kB
+    Active(anon):   23143420 kB
+    Inactive(anon):  2038512 kB
+    Active(file):    2933120 kB
+    Inactive(file):  1752648 kB
+    Unevictable:       23588 kB
+    Mlocked:               0 kB
+    SwapTotal:       8191996 kB
+    SwapFree:        7382524 kB
+    Dirty:               804 kB
+    Writeback:             0 kB
+    AnonPages:      23167324 kB
+    Mapped:          1077032 kB
+    Shmem:           2021672 kB
+    Slab:            1113660 kB
+    SReclaimable:     729312 kB
+    SUnreclaim:       384348 kB
+    KernelStack:       70048 kB
+    PageTables:       555492 kB
+    NFS_Unstable:          0 kB
+    Bounce:                0 kB
+    WritebackTmp:          0 kB
+    CommitLimit:    24536824 kB
+    Committed_AS:   55187548 kB
+    VmallocTotal:   34359738367 kB
+    VmallocUsed:      398492 kB
+    VmallocChunk:   34358947836 kB
+    Percpu:             1504 kB
+    HardwareCorrupted:     0 kB
+    AnonHugePages:   9066496 kB
+    CmaTotal:              0 kB
+    CmaFree:               0 kB
+    HugePages_Total:       0
+    HugePages_Free:        0
+    HugePages_Rsvd:        0
+    HugePages_Surp:        0
+    Hugepagesize:       2048 kB
+    DirectMap4k:      108468 kB
+    DirectMap2M:     6092800 kB
+    DirectMap1G:    27262976 kB
+
+
+########################################################################
+Get environment info ...
+########################################################################
+ENV VAR: TCL_LIBRARY = /home/aed/cadence/PVS161/share/lib/tcltk/08.64/tcl8.6
+ENV VAR: TCLX_LIBRARY = /home/aed/cadence/PVS161/share/lib/tclx/08.40
+ENV VAR: TCLLIBPATH = /home/aed/cadence/PVS161/share/lib/itcl/3.4.1 /home/aed/cadence/PVS161/share/lib/tclxml/3.2 /home/aed/cadence/PVS161/share/lib/tcllib/1.18 /home/aed/cadence/PVS161/share/lib/itcl/3.4.1 /home/aed/cadence/PVS161/share/lib/tclxml/3.2 /home/aed/cadence/PVS161/share/lib/tcllib/1.18 
+
+
+########################################################################
+Parsing Control File /tmp/ipvsRulesCheckControl.4905@aed.1 ...
+########################################################################
+RESULTS_DB -erc "/home/user19/PLL_421E/lvs/freq_div.erc_errors.ascii" -ascii;
+LVS_RUN_ERC_CHECKS yes;
+
+########################################################################
+Parsing Rule File /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_LVS/Sky130_PDK_Changes_for_LVS.pdf ...
+########################################################################
+[ERROR] Undefined rule '%PDF-1.7' found at line 1 in file /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_LVS/Sky130_PDK_Changes_for_LVS.pdf
+[ERROR] syntax error
+[ERROR] Undefined rule 'yY´K' found at line 22 in file /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_LVS/Sky130_PDK_Changes_for_LVS.pdf
+[ERROR] syntax error
+[ERROR] syntax error
+[INFO] There are 5 errors in PVS rule file /home/aed/libs/Sky130_cadance_pdk/sky130_release_0.1.0/Sky130_LVS/Sky130_PDK_Changes_for_LVS.pdf
+Finished parsing rule file(s) with error.
+
+Execution aborted.  Exiting with status 1.
+
+
+Netlist Extraction Finished Abnormally. Sun Jun 21 15:06:24 2026
+
+

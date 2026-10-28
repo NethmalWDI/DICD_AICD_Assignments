@@ -1,0 +1,7 @@
+assign pin=SE 	test_function= +SE; 	# shift_enable
+assign pin=clk_a 	test_function= -ES; 	
+assign pin=clk_b 	test_function= -ES; 	
+assign pin=scan_in_a 	test_function= SI0;
+assign pin=scan_out_a 	test_function= SO0;
+assign pin=scan_in_b 	test_function= SI1;
+assign pin=scan_out_b 	test_function= SO1;

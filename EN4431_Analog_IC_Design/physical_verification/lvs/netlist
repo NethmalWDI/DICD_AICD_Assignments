@@ -1,0 +1,52 @@
+
+
+***********************************************************
+* CDL produced by pvsBuildNetlist on Jun 21 17:51:31 2026 *
+***********************************************************
+
+
+*pvsViewList = auCdl schematic
+*pvsStopList = ("auCdl")
+*pvsSimName  = auCdl
+
+
+
+*.EXPAND_ON_M_FACTOR
+*.MEGA
+
+
+
+.subckt Current_trarved_ring_VCO vdd vin vout vss
+*PVSCELL netlisted from Epitaxc_new Current_trarved_ring_VCO schematic
+  MNM0 net024 net028 net15 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM1 net15 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM10 vn vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM11 vout net028 vss vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM17 net042 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM18 net053 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM19 net029 net027 net042 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM2 net018 net024 net019 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM20 net028 net029 net053 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM21 vp vin vss vss nfet_01v8_lvt M=1 L=1u W=90u
+  MNM3 net019 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MNM4 net027 net018 net040 vss nfet_01v8_lvt M=1 L=1u W=3u
+  MNM5 net040 vn vss vss nfet_01v8_lvt M=1 L=1u W=8u
+  MPM0 net16 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM1 net024 net028 net16 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM10 vn vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM11 vout net028 vdd vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM17 net029 net027 net041 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM18 net028 net029 net055 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM19 net055 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM2 net017 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM20 net041 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM21 vp vp vdd vdd pfet_01v8_lvt M=1 L=1u W=8u
+  MPM3 net018 net024 net017 vdd pfet_01v8_lvt M=1 L=1u W=6u
+  MPM4 net039 vp vdd vdd pfet_01v8_lvt M=1 L=1u W=16u
+  MPM5 net027 net018 net039 vdd pfet_01v8_lvt M=1 L=1u W=6u
+.ends Current_trarved_ring_VCO
+
+
+***********************************************************
+*             Completed at Jun 21 17:51:31 2026           *
+***********************************************************
